@@ -3,7 +3,7 @@ require_once './app/controllers/finance.controller.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-$action = 'list'; // acción por defecto
+$action = 'company'; // acción por defecto
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
@@ -17,13 +17,13 @@ $financeController = new FinanceController();
 
 // tabla de ruteo
 switch ($params[0]) {
-    case 'list':
-        $financeController->showTasks();
+    case 'company':
+        $financeController->showCompany();
         break;
-  /*   case 'add':
-        $financeController->addTask();
+   case 'about':
+        $financeController->ShowAbout();
         break;
-    case 'delete':
+   /*  case 'delete':
         // obtengo el parametro de la acción
         $id = $params[1];
         $financeController->deleteTask($id);

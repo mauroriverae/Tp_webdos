@@ -11,12 +11,14 @@ class FinanceController {
         $this->view = new FinanceView();
     }
 
-    public function showTasks() {
+    public function showCompany() {
         $companies = $this->model->getAllCompany();
         $this->view->showCompany($companies);
     }
 
-    
+    public function ShowAbout(){
+        echo "Hola este es el about";
+    }
  /*    function addTask() {
         // TODO: validar entrada de datos
 
