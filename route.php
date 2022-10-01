@@ -23,11 +23,11 @@ switch ($params[0]) {
    case 'about':
         $financeController->ShowAbout();
         break;
-   /*  case 'delete':
+    case 'delete':
         // obtengo el parametro de la acción
         $id = $params[1];
-        $financeController->deleteTask($id);
-        break; */
+        $financeController->deleteComapny($company);
+        break;
     default:
         echo('404 Page not found');
         break;

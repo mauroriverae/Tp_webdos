@@ -7,9 +7,14 @@ class FinanceView {
 
         $this->smarty = new Smarty();
     }
+    
     function showCompany($companies) {
          $this->smarty->assign("companies", $companies);
          $this->smarty->display('templates/companytable.tpl');
+    }
+
+    function showHomeLocation(){
+        header("location: " .BASE_URL."home");
     }
 }
 

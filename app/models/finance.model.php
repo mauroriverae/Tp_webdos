@@ -21,6 +21,10 @@ class FinanceModel {
         return $company;
     }
 
+    function deleteCompnayByname($company) {
+       $query = $this->db->prepare('DELETE FROM dbb WHERE company = ?');
+       $query->execute([$company]);
+   }
     /**
      * Inserta una tarea en la base de datos.
      */
@@ -35,10 +39,7 @@ class FinanceModel {
     /**
      * Elimina una tarea dado su id.
      */
-   /*  function deleteTaskById($id) {
-        $query = $this->db->prepare('DELETE FROM tareas WHERE id_tarea = ?');
-        $query->execute([$id]);
-    }
+   /*
  */
 }
 

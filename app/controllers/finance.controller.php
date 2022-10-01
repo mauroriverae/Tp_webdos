@@ -19,6 +19,10 @@ class FinanceController {
     public function ShowAbout(){
         echo "Hola este es el about";
     }
+    function deleteComapny($company) {
+        $this->model->deleteCompnayByname($company);
+        header("Location: " . BASE_URL);
+    }
  /*    function addTask() {
         // TODO: validar entrada de datos
 
@@ -31,8 +35,5 @@ class FinanceController {
         header("Location: " . BASE_URL); 
     }
    
-    function deleteTask($id) {
-        $this->model->deleteTaskById($id);
-        header("Location: " . BASE_URL);
-    } */
+     */
 }

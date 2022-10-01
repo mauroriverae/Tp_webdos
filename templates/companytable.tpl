@@ -13,6 +13,9 @@
 				<td>{$company->tiker}</td>
 				<td>{$company->company}</td>
 				<td>{$company->sector}</td>
+				<td>
+					<a href="delete/{$company->company}" type='button' class='btn btn-danger'>Borrar</a>
+				</td>
 			</tr>
 		{/foreach}
 	</tbody>
