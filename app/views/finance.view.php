@@ -8,10 +8,8 @@ class FinanceView {
         $this->smarty = new Smarty();
     }
     function showCompany($companies) {
-        include './templates/header.php';   
          $this->smarty->assign("companies", $companies);
-        $this->smarty->display('templates/companytable.tpl');
-        include './templates/footer.php';
+         $this->smarty->display('templates/companytable.tpl');
     }
 }
 
