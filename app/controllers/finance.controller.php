@@ -16,6 +16,11 @@ class FinanceController {
         $this->view->showCompany($companies);
     }
 
+    public function cTecnology(){
+        $sector = $_GET['name'];  
+        echo $sector;
+       /*  $companies = $this->model->FilterCompany($sector); */
+    }
     public function ShowAbout(){
         echo "Hola este es el about";
     }

@@ -25,6 +25,14 @@ class FinanceModel {
        $query = $this->db->prepare('DELETE FROM dbb WHERE company = ?');
        $query->execute([$company]);
    }
+
+   function FilterCompany($sector){
+        $query = $this->db->prepare('SELECT * FROM dbb WHERE sector = ?');
+        $query->execute([$sector]); 
+        $companySector = $query->fetchall(PDO::FETCH_OBJ);
+        return $companySector;
+    }
+   
     /**
      * Inserta una tarea en la base de datos.
      */
@@ -34,12 +42,5 @@ class FinanceModel {
 
         return $this->db->lastInsertId();
     } */
-
-
-    /**
-     * Elimina una tarea dado su id.
-     */
-   /*
- */
 }
 
