@@ -17,13 +17,16 @@ class FinanceController {
     }
 
     public function cTecnology(){
-        $sector = $_GET['name'];  
-        echo $sector;
-       /*  $companies = $this->model->FilterCompany($sector); */
+        $tecnology = $this->model->FilterCompany('Tecnologia');
+        $this->view->showTecnology($tecnology);
     }
+
+
     public function ShowAbout(){
         echo "Hola este es el about";
     }
+
+
     function deleteComapny($company) {
         $this->model->deleteCompnayByname($company);
         header("Location: " . BASE_URL);

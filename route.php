@@ -28,8 +28,7 @@ switch ($params[0]) {
         $id = $params[1];
         $financeController->deleteComapny($company);
         break;
-    case 'tecnologicas':
-        /* $id = $params[1]; */
+    case 'Tecnologia':
         $financeController->cTecnology();
         break;
     default:
