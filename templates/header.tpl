@@ -20,25 +20,25 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Tecnologia">Tecnologicas</a>
+                    <a class="nav-link" aria-current="page" name="Tecnologia" href="sector/Tecnologia">Tecnologicas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Industriales">Industriales</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Industriales">Industriales</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Finanzieras">Financieras</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Servicios financieros">Financieras</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Discrecional">Consumo discrecional</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Consumo discrecional">Consumo discrecional</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Energia">Energia</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Energia">Energia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Comunicacion">Servicios de comunicacion</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Servicios de comunicacion">Servicios de comunicacion</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" name="nombre" href="Materiales">Materiales Basicos</a>
+                    <a class="nav-link" aria-current="page" name="nombre" href="sector/Materiales Basicos">Materiales Basicos</a>
                   </li>
                 </ul>
               </div>

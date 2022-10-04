@@ -28,26 +28,9 @@ switch ($params[0]) {
         $company = $params[1];
         $financeController->deleteComapny($company);
         break;
-    case 'Tecnologia':
-        $financeController->cTecnology('Tecnologia');
-        break;
-    case 'Industriales':
-        $financeController->cTecnology('Industriales');
-        break;
-    case 'Finanzieras':
-        $financeController->cTecnology('Servicios financieros');
-        break;
-    case 'Discrecional':
-        $financeController->cTecnology('Consumo discrecional');
-        break;
-    case 'Energia':
-        $financeController->cTecnology('Energia');
-        break;
-    case 'Comunicacion':
-        $financeController->cTecnology('Servicios de comunicacion');
-        break;
-    case 'Materiales':
-        $financeController->cTecnology('Materiales Basicos');
+    case 'sector':
+        $sector = $params[1];
+        $financeController->cTecnology($sector);
         break;
     default:
         echo('404 Page not found');
