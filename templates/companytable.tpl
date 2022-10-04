@@ -1,4 +1,5 @@
 {include file="templates/header.tpl" }
+
 <table class="table">
       <thead>
         <tr>
@@ -20,5 +21,5 @@
 		{/foreach}
 	</tbody>
 </table>
-
+{include file="templates/form_alta.tpl" }
 {include file="templates/footer.tpl" }

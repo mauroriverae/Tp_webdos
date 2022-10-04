@@ -14,11 +14,12 @@ $params = explode('/', $action);
 // instancio el unico controller que existe por ahora
 $financeController = new FinanceController();
 
-
-// tabla de ruteo
 switch ($params[0]) {
     case 'company':
         $financeController->showCompany();
+        break;
+    case 'add':
+        $financeController->addCompany();
         break;
    case 'about':
         $financeController->ShowAbout();
@@ -29,7 +30,25 @@ switch ($params[0]) {
         $financeController->deleteComapny($company);
         break;
     case 'Tecnologia':
-        $financeController->cTecnology();
+        $financeController->cTecnology('Tecnologia');
+        break;
+    case 'Industriales':
+        $financeController->cTecnology('Industriales');
+        break;
+    case 'Finanzieras':
+        $financeController->cTecnology('Servicios financiero');
+        break;
+    case 'Discrecional':
+        $financeController->cTecnology('Consumo discrecional');
+        break;
+    case 'Energia':
+        $financeController->cTecnology('Energia');
+        break;
+    case 'Comunicacion':
+        $financeController->cTecnology('Servicios de comunicacion');
+        break;
+    case 'Materiales':
+        $financeController->cTecnology('Materiales Basicos');
         break;
     default:
         echo('404 Page not found');

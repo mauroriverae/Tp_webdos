@@ -33,14 +33,12 @@ class FinanceModel {
         return $companySector;
     }
    
-    /**
-     * Inserta una tarea en la base de datos.
-     */
-    /* public function insertTask($title, $description, $priority) {
-        $query = $this->db->prepare("INSERT INTO tareas (titulo, descripcion, prioridad, finalizada) VALUES (?, ?, ?, ?)");
-        $query->execute([$title, $description, $priority, false]);
 
+    function insertCompany($company, $sector, $tiker) {
+        $query = $this->db->prepare("INSERT INTO dbb (company, sector, tiker,) VALUES (?, ?, ?)");
+        $query->execute([$company, $sector, $tiker]);
         return $this->db->lastInsertId();
-    } */
+        
+    }
 }
 

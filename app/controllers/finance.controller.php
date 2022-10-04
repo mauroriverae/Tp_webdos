@@ -16,8 +16,8 @@ class FinanceController {
         $this->view->showCompany($companies);
     }
 
-    public function cTecnology(){
-        $tecnology = $this->model->FilterCompany('Tecnologia');
+    public function cTecnology($sector){
+        $tecnology = $this->model->FilterCompany($sector);
         $this->view->showTecnology($tecnology);
     }
 
@@ -31,17 +31,17 @@ class FinanceController {
         $this->model->deleteCompnayByname($company);
         header("Location: " . BASE_URL);
     }
- /*    function addTask() {
+
+
+    function addCompany() {
         // TODO: validar entrada de datos
+        $company = $_POST['company'];
+        $sector = $_POST['sector'];
+        $tiker = $_POST['tiker'];
 
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $priority = $_POST['priority'];
+        $id = $this->model->insertCompany($company, $sector, $tiker) ;
 
-        $id = $this->model->insertTask($title, $description, $priority);
-
-        header("Location: " . BASE_URL); 
+        header("Location: " .BASE_URL); 
     }
    
-     */
 }

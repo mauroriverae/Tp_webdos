@@ -9,8 +9,8 @@ class FinanceView {
     }
     
     function showCompany($companies) {
-         $this->smarty->assign("companies", $companies);
-         $this->smarty->display('templates/companytable.tpl');
+        $this->smarty->assign("companies", $companies);
+        $this->smarty->display('templates/companytable.tpl');
     }
     
     function showTecnology($tecnology){

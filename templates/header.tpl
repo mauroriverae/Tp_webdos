@@ -22,11 +22,27 @@
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" name="nombre" href="Tecnologia">Tecnologicas</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Industriales">Industriales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Finanzieras">Financieras</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Discrecional">Consumo discrecional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Energia">Energia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Comunicacion">Servicios de comunicacion</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" name="nombre" href="Materiales">Materiales Basicos</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-
-    <!-- inicio main container -->
     <main class="container">
