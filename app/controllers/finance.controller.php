@@ -38,6 +38,7 @@ class FinanceController {
         $company = $_POST['company'];
         $sector = $_POST['sector'];
         $tiker = $_POST['tiker'];
+      
 
         $id = $this->model->insertCompany($company, $sector, $tiker) ;
 

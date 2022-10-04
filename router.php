@@ -36,7 +36,7 @@ switch ($params[0]) {
         $financeController->cTecnology('Industriales');
         break;
     case 'Finanzieras':
-        $financeController->cTecnology('Servicios financiero');
+        $financeController->cTecnology('Servicios financieros');
         break;
     case 'Discrecional':
         $financeController->cTecnology('Consumo discrecional');

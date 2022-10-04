@@ -34,8 +34,8 @@ class FinanceModel {
     }
    
 
-    function insertCompany($company, $sector, $tiker) {
-        $query = $this->db->prepare("INSERT INTO dbb (company, sector, tiker,) VALUES (?, ?, ?)");
+    function insertCompany($company , $sector , $tiker) {
+        $query = $this->db->prepare("INSERT INTO dbb (company, sector, tiker) VALUES (?, ?, ?)");
         $query->execute([$company, $sector, $tiker]);
         return $this->db->lastInsertId();
         
