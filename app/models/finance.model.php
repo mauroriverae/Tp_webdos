@@ -8,9 +8,6 @@ class FinanceModel {
         $this->db = new PDO('mysql:host=localhost;'.'dbname=db_finance;charset=utf8', 'root', '');
     }
 
-    /**
-     * Devuelve la lista de tareas completa.
-     */
     public function getAllCompany() {
         $query = $this->db->prepare("SELECT * FROM dbb");
         $query->execute();
@@ -26,7 +23,7 @@ class FinanceModel {
        $query->execute([$company]);
    }
 
-   function FilterCompany($sector){
+    function FilterCompany($sector){
         $query = $this->db->prepare('SELECT * FROM dbb WHERE sector = ?');
         $query->execute([$sector]); 
         $companySector = $query->fetchall(PDO::FETCH_OBJ);

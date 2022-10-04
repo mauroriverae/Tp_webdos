@@ -25,8 +25,7 @@ switch ($params[0]) {
         $financeController->ShowAbout();
         break;
     case 'delete':
-        // obtengo el parametro de la acción
-        $id = $params[1];
+        $company = $params[1];
         $financeController->deleteComapny($company);
         break;
     case 'Tecnologia':
