@@ -89,3 +89,10 @@ button:hover{
     border: 2px solid #3498db;
     background: linear-gradient(#34495e, #2c3e50);
 }
+
+#error{
+    text-shadow: 1px 1px 12px rgb(243, 6, 6);
+    color: #fff;
+    padding: 4px;
+    margin: 10px;
+}
