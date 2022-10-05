@@ -32,7 +32,7 @@
             }
         }
 //me quede 38min
-
+//mañana termino esto y continuo para la comunicacion de las BD
 
 
 

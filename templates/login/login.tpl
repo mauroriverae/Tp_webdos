@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="{BASE_URL}">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="templates/login/login.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
