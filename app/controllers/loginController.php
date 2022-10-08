@@ -15,6 +15,12 @@
         function login(){
             $this->view->showLogin();
         }
+        function logOut(){
+            session_start();
+            session_destroy();
+            $this->view->showLogin("Sesion cerrada con exito");
+
+        }
 
 
         function verfyLogin(){
@@ -33,5 +39,6 @@
                 }
             }
         }
+        
 
     }

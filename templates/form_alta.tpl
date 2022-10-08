@@ -14,7 +14,7 @@
                     <option value="Servicios de comunicacion">	Servicios de comunicacion</option>
                     <option value="Materiales Basicos">Materiales Basicos</option>
                     <option value="Servicios financieros">	Servicios financieros</option>
-                    <option value="	Consumo discrecional">	Consumo discrecional</option>
+                    <option value="Consumo discrecional">	Consumo discrecional</option>
                     <option value="Industriales">Industriales</option>
                 </select>
             </div>

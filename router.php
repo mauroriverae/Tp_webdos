@@ -17,6 +17,9 @@ $financeController = new FinanceController();
 $loginController = new LoginController();
 
 switch ($params[0]) {
+    case 'logout':
+        $loginController->logOut();
+        break;
     case 'verify':
         $loginController->verfyLogin();
         break;
@@ -37,8 +40,16 @@ switch ($params[0]) {
         $financeController->deleteComapny($company);
         break;
     case 'sector':
-        $sector = $params[1];
-        $financeController->cTecnology($sector);
+        if($params[1]== []){
+            $financeController->showCompany();
+        }else{
+            $sector = $params[1];
+            $financeController->cTecnology($sector);
+            break;
+        }
+    case 'more':
+        $tiker = $params[1];
+        echo $tiker;
         break;
     default:
         echo('404 Page not found');

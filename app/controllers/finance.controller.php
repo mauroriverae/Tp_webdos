@@ -33,18 +33,19 @@ class FinanceController {
 
 
     function ShowAbout(){
+        $this->checkLogged();
         echo "Hola este es el about";
     }
 
 
     function deleteComapny($company) {
+        $this->checkLogged();
         $this->model->deleteCompnayByname($company);
         header("Location: " . BASE_URL);
     }
 
-
     function addCompany() {
-        // TODO: validar entrada de datos
+        $this->checkLogged();
         $company = $_POST['company'];
         $sector = $_POST['sector'];
         $tiker = $_POST['tiker'];

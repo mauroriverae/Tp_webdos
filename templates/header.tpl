@@ -14,6 +14,16 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="">MR Capital</a>
+              {if isset($smarty.session.USER_ID)}
+                <button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
+              {else}
+                <button class="btn btn-outline-danger"><a class="" href="logout">Logout</a></button>
+                <h3 class="navbar-brand">
+                  <i class="bi bi-person"></i>
+                  {$smarty.session.email}
+                </h3>
+              {/if}
+
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
