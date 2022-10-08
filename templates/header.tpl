@@ -13,14 +13,14 @@
     <header>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="">MR Capital</a>
+              <a class="navbar-brand" href="">MR</a>
               {* muestro nombre y logout si esta log  *}
               {if isset($smarty.session.USER_ID)}
                 <button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
               {else}
-                <button class="btn btn-outline-danger"><a class="" href="logout">Logout</a></button>
-                <h3 class="navbar-brand">
-                  <i class="bi bi-person"></i>
+                <button  class="btn btn-outline-danger"><a href="logout">Logout</a></button>
+                <h3 class="lead text-light ">
+                  <svg  class="bg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm.847-8.145a2.502 2.502 0 10-1.694 0C5.471 8.261 4 9.775 4 11c0 .395.145.995 1 .995h6c.855 0 1-.6 1-.995 0-1.224-1.47-2.74-3.153-3.145z"></path></svg>
                   {$smarty.session.email}
                 </h3>
               {/if}
