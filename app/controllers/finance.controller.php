@@ -10,19 +10,29 @@ class FinanceController {
         $this->model = new FinanceModel();
         $this->view = new FinanceView();
     }
+    
+    function checkLogged(){
+        session_start();
+        if(!isset($_SESSION['email'])){
+            $this->view->showLoginLocation();
+        }
 
-    public function showCompany() {
+    }
+
+    function showCompany(){
+        $this->checkLogged();
         $companies = $this->model->getAllCompany();
         $this->view->showCompany($companies);
     }
 
-    public function cTecnology($sector){
+    function cTecnology($sector){
+        $this->checkLogged();
         $tecnology = $this->model->FilterCompany($sector);
         $this->view->showTecnology($tecnology);
     }
 
 
-    public function ShowAbout(){
+    function ShowAbout(){
         echo "Hola este es el about";
     }
 

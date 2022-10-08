@@ -11,10 +11,7 @@ class FinanceModel {
     public function getAllCompany() {
         $query = $this->db->prepare("SELECT * FROM dbb");
         $query->execute();
-
-        // 3. obtengo los resultados
-        $company = $query->fetchAll(PDO::FETCH_OBJ); // devuelve un arreglo de objetos
-        
+        $company = $query->fetchAll(PDO::FETCH_OBJ); 
         return $company;
     }
 

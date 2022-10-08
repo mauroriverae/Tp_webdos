@@ -19,8 +19,8 @@ class FinanceView {
     }
 
 
-    function showHomeLocation(){
-        header("location: " .BASE_URL."home");
+    function showLoginLocation(){
+        header("location: " .BASE_URL."login");
     }
 }
 

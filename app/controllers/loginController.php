@@ -25,19 +25,13 @@
                 $user = $this->model->getUser($email);
 
                 if($user && password_verify($password, $user->password)){
+                    session_start();
+                    $_SESSION['email'] = $email;
                     $this->view->showHome();
                 } else{
                     $this->view->showLogin("Acceso denegado");
                 }
             }
         }
-//me quede 38min
-//mañana termino esto y continuo para la comunicacion de las BD
-
-
-
-
-
-
 
     }

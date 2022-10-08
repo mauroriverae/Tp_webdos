@@ -4,15 +4,15 @@ require_once './app/controllers/LoginController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-$action = 'company'; // acción por defecto
+$action = 'company'; 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
 
-// parsea la accion Ej: dev/juan --> ['dev', juan]
+
 $params = explode('/', $action);
 
-// instancio el unico controller que existe por ahora
+
 $financeController = new FinanceController();
 $loginController = new LoginController();
 
@@ -26,11 +26,11 @@ switch ($params[0]) {
     case 'company':
         $financeController->showCompany();
         break;
-    case 'add':
-        $financeController->addCompany();
-        break;
    case 'about':
         $financeController->ShowAbout();
+        break;
+    case 'add':
+        $financeController->addCompany();
         break;
     case 'delete':
         $company = $params[1];
