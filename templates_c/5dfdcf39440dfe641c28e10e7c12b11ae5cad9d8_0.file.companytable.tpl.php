@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-04 01:10:07
+/* Smarty version 4.2.1, created on 2022-10-08 23:45:17
   from 'C:\xampp\htdocs\web2\Tp Especial\Tp_webdos\templates\companytable.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633b6bcfcfa235_87314254',
+  'unifunc' => 'content_6341ef6d0be779_04630089',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5dfdcf39440dfe641c28e10e7c12b11ae5cad9d8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\Tp Especial\\Tp_webdos\\templates\\companytable.tpl',
-      1 => 1664838604,
+      1 => 1665263005,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_633b6bcfcfa235_87314254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6341ef6d0be779_04630089 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -43,8 +43,9 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['company']->value
 $_smarty_tpl->tpl_vars['company']->do_else = false;
 ?>	
 			<tr class="">
-				<td><?php echo $_smarty_tpl->tpl_vars['company']->value->tiker;?>
-</td>
+			<td><a href="more/<?php echo $_smarty_tpl->tpl_vars['company']->value->tiker;?>
+"><?php echo $_smarty_tpl->tpl_vars['company']->value->tiker;?>
+</a></td>
 				<td><?php echo $_smarty_tpl->tpl_vars['company']->value->company;?>
 </td>
 				<td><?php echo $_smarty_tpl->tpl_vars['company']->value->sector;?>

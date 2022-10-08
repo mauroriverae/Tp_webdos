@@ -19,7 +19,6 @@
             session_start();
             session_destroy();
             $this->view->showLogin("Sesion cerrada con exito");
-
         }
 
 
