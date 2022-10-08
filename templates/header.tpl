@@ -14,6 +14,7 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="">MR Capital</a>
+              {* muestro nombre y logout si esta log  *}
               {if isset($smarty.session.USER_ID)}
                 <button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
               {else}
