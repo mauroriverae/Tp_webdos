@@ -6,12 +6,13 @@
           <th scope="col">Tiker</th>
           <th scope="col">Nombre</th>
           <th scope="col">Sector</th>
+          <th scope="col"></th>
         </tr>
       </thead>
 	  <tbody>
 	  	{foreach from=$companies item=$company}	
 			<tr class="">
-			<td><a href="information/{$company->tiker}">{$company->tiker}</a></td>
+			<td><a class="tiker" href="information/{$company->tiker}">{$company->tiker}</a></td>
 				<td>{$company->company}</td>
 				<td>{$company->sector}</td>
 				<td>

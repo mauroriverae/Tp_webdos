@@ -23,7 +23,7 @@
 
     <div class="form-group">
         <label>Tiker</label>
-        <input name="tiker" type="text" class="form-control" required>
+        <input name="tiker" type="text" class="form-control i__tiker" required>
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>

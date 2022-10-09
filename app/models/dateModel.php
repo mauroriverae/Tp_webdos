@@ -8,10 +8,11 @@
         }
 
         function dateCompany($tiker){
-            $query = $this->db->prepare('SELECT * FROM dbb WHERE sector = ?');
+            echo $tiker;
+           /*  $query = $this->db->prepare('SELECT * FROM dbb WHERE sector = ?');
             $query->execute([$tiker]); 
             $companyDate = $query->fetchall(PDO::FETCH_OBJ);
-            return $companyDate;
+            return $companyDate; */
             //hacer algo asi pero para JOIN
         }
     }

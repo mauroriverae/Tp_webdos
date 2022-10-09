@@ -44,16 +44,16 @@ class FinanceController {
     function deleteComapny($company) {
         $this->authHelper->checkLogged();
         $this->model->deleteCompnayByname($company);
-        header("Location: " . BASE_URL);
+        header("Location: " . BASE_URL."company");
     }
 
     function addCompany() {
-        $this->helper->checkLogged();   
+        $this->authHelper->checkLogged();   
         $company = $_POST['company'];
         $sector = $_POST['sector'];
         $tiker = $_POST['tiker'];
         $id = $this->model->insertCompany($company, $sector, $tiker) ;
-        header("Location: " .BASE_URL); 
+        header("Location: " .BASE_URL."company"); 
     }
    
 }
