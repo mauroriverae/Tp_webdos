@@ -11,7 +11,7 @@
 	  <tbody>
 	  	{foreach from=$companies item=$company}	
 			<tr class="">
-			<td><a href="more/{$company->tiker}">{$company->tiker}</a></td>
+			<td><a href="information/{$company->tiker}">{$company->tiker}</a></td>
 				<td>{$company->company}</td>
 				<td>{$company->sector}</td>
 				<td>

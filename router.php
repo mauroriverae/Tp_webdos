@@ -1,10 +1,11 @@
 <?php
 require_once './app/controllers/finance.controller.php';
 require_once './app/controllers/LoginController.php';
+require_once './app/controllers/dateController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-$action = 'company'; 
+$action = 'login'; 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
@@ -15,6 +16,7 @@ $params = explode('/', $action);
 
 $financeController = new FinanceController();
 $loginController = new LoginController();
+$infoController = new InformationController();
 
 switch ($params[0]) {
     case 'logout':
@@ -47,9 +49,9 @@ switch ($params[0]) {
             $financeController->cTecnology($sector);
             break;
         }
-    case 'more':
+    case 'information':
         $tiker = $params[1];
-        echo $tiker;
+        $infoController->showInformation($tiker);
         break;
     default:
         echo('404 Page not found');
