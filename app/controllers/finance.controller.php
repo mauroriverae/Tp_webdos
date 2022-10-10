@@ -14,6 +14,14 @@ class FinanceController {
         $this->authHelper = new AuthHelper();
     }
     
+    /*     function checkLogged(){
+        session_start();
+        if(!isset($_SESSION['email'])){
+            $this->view->showLoginLocation();
+        }
+
+    } */
+
     function showCompany(){
         $this->authHelper->checkLogged();
         $companies = $this->model->getAllCompany();
@@ -36,19 +44,16 @@ class FinanceController {
     function deleteComapny($company) {
         $this->authHelper->checkLogged();
         $this->model->deleteCompnayByname($company);
-        header("Location: " . BASE_URL."company");
+        header("Location: " . BASE_URL);
     }
 
     function addCompany() {
-        $this->authHelper->checkLogged();   
+        $this->helper->checkLogged();   
         $company = $_POST['company'];
         $sector = $_POST['sector'];
         $tiker = $_POST['tiker'];
-        $index = $_POST['index'];
-        $marketcapt = $_POST['marketcapt'];
-        $shares = $_POST['shares'];
-        $id = $this->model->insertCompany($company, $sector, $tiker, $index, $marketcap, $shares) ;
-        header("Location: " .BASE_URL."company"); 
+        $id = $this->model->insertCompany($company, $sector, $tiker) ;
+        header("Location: " .BASE_URL); 
     }
    
 }
