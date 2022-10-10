@@ -1,5 +1,4 @@
-{* {include file="templates/header.tpl" }
- *}
+{include file="templates/header.tpl" }
 <table class="table">
       <thead>
         <tr>

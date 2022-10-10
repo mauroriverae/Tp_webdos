@@ -8,7 +8,7 @@
         }
 
         function dateCompany($tiker){
-            $query = $this->db->prepare('SELECT * FROM companies WHERE  Tiker = ?');
+            $query = $this->db->prepare('SELECT * FROM dates WHERE  Tiker = ?');
             $query->execute([$tiker]); 
             $companyDate = $query->fetchall(PDO::FETCH_OBJ);
  
