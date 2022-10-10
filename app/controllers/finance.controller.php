@@ -14,14 +14,6 @@ class FinanceController {
         $this->authHelper = new AuthHelper();
     }
     
-    /*     function checkLogged(){
-        session_start();
-        if(!isset($_SESSION['email'])){
-            $this->view->showLoginLocation();
-        }
-
-    } */
-
     function showCompany(){
         $this->authHelper->checkLogged();
         $companies = $this->model->getAllCompany();

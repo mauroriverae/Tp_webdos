@@ -11,6 +11,6 @@
         function showInformation($tiker){
             $this->model->dateCompany($tiker);
         }
-
+        // realcionar con la nueva BD 
 
     }
