@@ -5,23 +5,23 @@ class FinanceModel {
     private $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=db_finance;charset=utf8', 'root', '');
+        $this->db = new PDO('mysql:host=localhost;'.'dbname=finance;charset=utf8', 'root', '');
     }
 
     public function getAllCompany() {
-        $query = $this->db->prepare("SELECT * FROM dbb");
+        $query = $this->db->prepare("SELECT * FROM companies");
         $query->execute();
         $company = $query->fetchAll(PDO::FETCH_OBJ); 
         return $company;
     }
 
     function deleteCompnayByname($company) {
-       $query = $this->db->prepare('DELETE FROM dbb WHERE company = ?');
+       $query = $this->db->prepare('DELETE FROM companies WHERE Company = ?');
        $query->execute([$company]);
    }
 
     function FilterCompany($sector){
-        $query = $this->db->prepare('SELECT * FROM dbb WHERE sector = ?');
+        $query = $this->db->prepare('SELECT * FROM companies WHERE Sector = ?');
         $query->execute([$sector]); 
         $companySector = $query->fetchall(PDO::FETCH_OBJ);
         return $companySector;
@@ -29,7 +29,7 @@ class FinanceModel {
    
 
     function insertCompany($company , $sector , $tiker) {
-        $query = $this->db->prepare("INSERT INTO dbb (company, sector, tiker) VALUES (?, ?, ?)");
+        $query = $this->db->prepare("INSERT INTO companies (Company, Sector, Tiker) VALUES (?, ?, ?)");
         $query->execute([$company, $sector, $tiker]);
         return $this->db->lastInsertId();
     }

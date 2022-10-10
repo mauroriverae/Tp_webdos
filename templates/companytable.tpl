@@ -12,11 +12,11 @@
 	  <tbody>
 	  	{foreach from=$companies item=$company}	
 			<tr class="">
-			<td><a class="tiker" href="information/{$company->tiker}">{$company->tiker}</a></td>
-				<td>{$company->company}</td>
-				<td>{$company->sector}</td>
+			<td><a class="tiker" href="information/{$company->Tiker}">{$company->Tiker}</a></td>
+				<td>{$company->Company}</td>
+				<td>{$company->Sector}</td>
 				<td>
-					<a href="delete/{$company->company}" type='button' class='btn btn-danger'>Borrar</a>
+					<a href="delete/{$company->Company}" type='button' class='btn btn-danger'>Borrar</a>
 				</td>
 			</tr>
 		{/foreach}

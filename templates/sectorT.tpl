@@ -10,9 +10,9 @@
 	  <tbody>
 	  	{foreach from=$tecnology item=$tech}	
 			<tr class="">
-				<td>{$tech->tiker}</td>
-				<td>{$tech->company}</td>
-				<td>{$tech->sector}</td>
+				<td>{$tech->Tiker}</td>
+				<td>{$tech->Company}</td>
+				<td>{$tech->Sector}</td>
 			</tr>
 		{/foreach}
 	</tbody>
