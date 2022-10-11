@@ -31,10 +31,6 @@ switch ($params[0]) {
     case 'company':
         $financeController->showCompany();
         break;
-   case 'about':
-        $financeController->ShowAbout();
-        $infoController->addDate();
-        break;
     case 'add':
         $financeController->addCompany();
         break;

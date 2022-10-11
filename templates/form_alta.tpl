@@ -26,25 +26,6 @@
         <input name="tiker" type="text" class="form-control i__tiker" required>
     </div>
 
-    <div class="form-group">
-        <label>Index</label>
-        <input name="index" type="text" class="form-control i__tiker" required>
-    </div>
-    
-    <div class="row">
-        <div class="col-9">
-            <div class="form-group">
-                <label>Market cap</label>
-                <input name="marketcapt" type="text" class="form-control" required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="form-group">
-                <label>Shares</label>
-                <input name="shares" type="text" class="form-control" required>
-            </div>
-        </div>
-    </div>
 
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>
 </form>
