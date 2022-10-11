@@ -22,14 +22,6 @@
         }
 
 
-        /* function addDate() {
-            $tiker = $_POST['tiker'];
-            $index = $_POST['index'];
-            $marketcapt = $_POST['marketcapt'];
-            $shares = $_POST['shares'];
-            $id = $this->model->insertCompany($tiker, $index, $marketcap, $shares) ;
-            header("Location: " .BASE_URL."company"); 
-        } */
-        // realcionar con la nueva BD 
+        /* Cambiar por join, esta mal asi  */
 
     }
