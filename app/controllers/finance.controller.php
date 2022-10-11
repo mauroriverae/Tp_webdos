@@ -38,7 +38,6 @@ class FinanceController {
         $company = $_POST['company'];
         $sector = $_POST['sector'];
         $tiker = $_POST['tiker'];
-        var_dump($_SESSION);
         $id = $this->model->insertCompany($company, $sector, $tiker) ;
         header("Location: " .BASE_URL. "company"); 
     }
