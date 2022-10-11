@@ -15,12 +15,20 @@
 			<td><a class="tiker" href="information/{$company->Tiker}">{$company->Tiker}</a></td>
 				<td>{$company->Company}</td>
 				<td>{$company->Sector}</td>
-				<td>
-					<a href="delete/{$company->Company}" type='button' class='btn btn-danger'>Borrar</a>
-				</td>
+				{if ($smarty.session.email !== 'adm@adm')}
+					<td></td>
+				{else}
+					<td>
+						<a href="delete/{$company->Company}" type='button' class='btn btn-danger'>Borrar</a>
+					</td>
+				{/if}
 			</tr>
 		{/foreach}
 	</tbody>
 </table>
-{include file="templates/form_alta.tpl" }
+{if ($smarty.session.email !== 'adm@adm')}
+	<button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
+{else}
+	{include file="templates/form_alta.tpl"}		
+{/if}
 {include file="templates/footer.tpl" }
