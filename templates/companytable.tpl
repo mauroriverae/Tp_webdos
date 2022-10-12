@@ -15,7 +15,7 @@
 			<td><a class="tiker" href="information/{$company->Tiker}">{$company->Tiker}</a></td>
 				<td>{$company->Company}</td>
 				<td>{$company->Sector}</td>
-				{if ($smarty.session.email !== 'adm@adm')}
+				{if ($smarty.session.level !== 'adm')}
 					<td></td>
 				{else}
 					<td>
