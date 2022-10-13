@@ -16,6 +16,4 @@
         function showHome(){
             header("Location: " .BASE_URL."company");
         }
-
-
     }
