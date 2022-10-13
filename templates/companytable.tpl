@@ -28,7 +28,7 @@
 		{/foreach}
 	</tbody>
 </table>
-{if ($smarty.session.email !== 'adm@adm')}
+{if ($smarty.session.level !== 'adm')} 
 	<button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
 {else}
 	{include file="templates/form_alta.tpl"}		

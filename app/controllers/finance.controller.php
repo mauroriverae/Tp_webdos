@@ -41,5 +41,11 @@ class FinanceController {
         $id = $this->model->insertCompany($company, $sector, $tiker) ;
         header("Location: " .BASE_URL. "company"); 
     }
-   
+    
+    function modifyCompany(){
+        $this->authHelper->checkLogged();
+        $this->updateCompany($company , $sector , $tiker);
+        header("Location: " . BASE_URL."company");
+
+    }
 }
