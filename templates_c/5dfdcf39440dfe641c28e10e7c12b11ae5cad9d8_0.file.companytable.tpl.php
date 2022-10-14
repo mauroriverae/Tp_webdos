@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 02:38:44
+/* Smarty version 4.2.1, created on 2022-10-14 02:56:28
   from 'C:\xampp\htdocs\web2\Tp Especial\Tp_webdos\templates\companytable.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6344bb14d5ea75_62519774',
+  'unifunc' => 'content_6348b3bc70acd1_95111509',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5dfdcf39440dfe641c28e10e7c12b11ae5cad9d8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\Tp Especial\\Tp_webdos\\templates\\companytable.tpl',
-      1 => 1665448721,
+      1 => 1665708985,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6344bb14d5ea75_62519774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348b3bc70acd1_95111509 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -51,12 +51,14 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 </td>
 				<td><?php echo $_smarty_tpl->tpl_vars['company']->value->Sector;?>
 </td>
-				<?php if (($_SESSION['email'] !== 'adm@adm')) {?>
+												<?php if (($_SESSION['email'] !== 'mauro@mauro')) {?>
 					<td></td>
 				<?php } else { ?>
 					<td>
 						<a href="delete/<?php echo $_smarty_tpl->tpl_vars['company']->value->Company;?>
 " type='button' class='btn btn-danger'>Borrar</a>
+						<a href="modify/<?php echo $_smarty_tpl->tpl_vars['company']->value->Tiker;?>
+" type='button' class='btn btn-warning'>modificar</a>
 					</td>
 				<?php }?>
 			</tr>
@@ -65,7 +67,7 @@ $_smarty_tpl->tpl_vars['company']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	</tbody>
 </table>
-<?php if (($_SESSION['email'] !== 'adm@adm')) {?>
+<?php if (($_SESSION['email'] !== 'mauro@mauro')) {?> 
 	<button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
 <?php } else { ?>
 	<?php $_smarty_tpl->_subTemplateRender("file:templates/form_alta.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

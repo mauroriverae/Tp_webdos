@@ -38,6 +38,13 @@ switch ($params[0]) {
         $company = $params[1];
         $financeController->deleteComapny($company);
         break;
+    case 'modify':
+        $company = $params[1];
+        $financeController->modifyCompany($company);
+        break;
+    case 'update':
+        $financeController->update();
+        break;
     case 'sector':
         if($params[1]== []){
             $financeController->showCompany();

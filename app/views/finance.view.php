@@ -22,6 +22,11 @@ class FinanceView {
     function showLoginLocation(){
         header("location: " .BASE_URL."login");
     }
+
+    function UpdateCompany($company) {
+        $this->smarty->assign("company", $company);
+        $this->smarty->display('templates/update.tpl');
+    }
 }
 
         

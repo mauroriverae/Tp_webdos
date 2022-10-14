@@ -36,7 +36,7 @@ class FinanceModel {
 
     function updateCompany($company , $sector , $tiker){
         $query = $this->db->prepare("UPDATE companies SET Company=?, Sector=?, Tiker=? WHERE Tiker=?");
-        $query->execute([$company , $sector , $tiker]);
+        $query->execute([$company , $sector , $tiker, $tiker ]);
     }
 
 }

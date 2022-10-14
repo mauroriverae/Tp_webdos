@@ -42,10 +42,18 @@ class FinanceController {
         header("Location: " .BASE_URL. "company"); 
     }
     
-    function modifyCompany(){
+    function modifyCompany($company){
         $this->authHelper->checkLogged();
-        $this->updateCompany($company , $sector , $tiker);
-        header("Location: " . BASE_URL."company");
+        $this->view->UpdateCompany($company);
+        /* $this->updateCompany($company , $sector , $tiker); */
+    }
 
+    function Update(){
+        $this->authHelper->checkLogged();
+        $company = $_POST['company'];
+        $sector = $_POST['sector'];
+        $tiker = $_POST['tiker'];
+        $this->model->updateCompany($company, $sector, $tiker);
+        header("Location: " .BASE_URL. "company"); 
     }
 }
