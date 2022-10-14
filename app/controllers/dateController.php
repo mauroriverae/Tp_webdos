@@ -14,7 +14,7 @@
             $this->view = new DateView();
             $this->authHelper = new AuthHelper();
         }
-        //conectar para hace consultas multitabla
+        
         function showInformation($tiker){
             $this->authHelper->checkLogged();
             $dates = $this->model->dateCompany($tiker);

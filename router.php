@@ -5,7 +5,7 @@ require_once './app/controllers/dateController.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-$action = 'login'; 
+$action = 'company'; 
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
@@ -58,6 +58,6 @@ switch ($params[0]) {
         $infoController->showInformation($tiker);
         break;
     default:
-        echo('404 Page not found');
+        header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
         break;
 }
