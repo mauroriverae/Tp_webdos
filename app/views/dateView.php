@@ -7,7 +7,6 @@
         } 
 
         function showDate($dates) {
-            
             $this->smarty->assign("dates", $dates);
             $this->smarty->display('templates/date.tpl');
         }

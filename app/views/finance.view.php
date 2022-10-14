@@ -13,8 +13,9 @@ class FinanceView {
         $this->smarty->display('templates/companytable.tpl');
     }
     
-    function showTecnology($tecnology){
-        $this->smarty->assign("tecnology", $tecnology);
+    function showSector($type, $sector){
+        $this->smarty->assign("sector", $sector);
+        $this->smarty->assign("type", $type);
         $this->smarty->display('templates/sectorT.tpl');
     }
 

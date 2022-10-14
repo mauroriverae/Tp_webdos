@@ -23,8 +23,8 @@ class FinanceController {
 
     function cTecnology($sector){
         $this->authHelper->checkLogged();
-        $tecnology = $this->model->FilterCompany($sector);
-        $this->view->showTecnology($tecnology);
+        $type = $this->model->FilterCompany($sector);
+        $this->view->showSector($type, $sector);
     }
 
     function deleteComapny($company) {
@@ -35,9 +35,9 @@ class FinanceController {
 
     function addCompany() {
         $this->authHelper->checkLogged();   
-        $company = $_POST['company'];
+        $company = ucwords($_POST['company']);
         $sector = $_POST['sector'];
-        $tiker = $_POST['tiker'];
+        $tiker =  strtoupper($_POST['tiker']);
         $id = $this->model->insertCompany($company, $sector, $tiker) ;
         header("Location: " .BASE_URL. "company"); 
     }

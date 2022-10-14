@@ -1,4 +1,5 @@
 {include file="templates/header.tpl" }
+<h1 class="h1">{$sector}</h1>
 <table class="table">
       <thead>
         <tr>
@@ -8,11 +9,11 @@
         </tr>
       </thead>
 	  <tbody>
-	  	{foreach from=$tecnology item=$tech}	
+	  	{foreach from=$type item=$sector}	
 			<tr class="">
-				<td>{$tech->Tiker}</td>
-				<td>{$tech->Company}</td>
-				<td>{$tech->Sector}</td>
+				<td>{$sector->Tiker}</td>
+				<td>{$sector->Company}</td>
+				<td>{$sector->Sector}</td>
 			</tr>
 		{/foreach}
 	</tbody>
