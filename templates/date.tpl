@@ -22,5 +22,5 @@
 		{/foreach}
 	</tbody>
 </table>
-{* Ese if hay no va  *}
+
 {include file="templates/footer.tpl" }
