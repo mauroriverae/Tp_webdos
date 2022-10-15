@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2022 at 02:37 AM
+-- Generation Time: Oct 15, 2022 at 11:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -62,7 +62,7 @@ INSERT INTO `companies` (`Company`, `Sector`, `Tiker`) VALUES
 ('NVIDIA Corporation', 'Tecnologia', 'NVDA'),
 ('Petroleo Brasileiro ADR Reptg 2', 'Energia', 'PBR'),
 ('QUALCOMM, Inc.', 'Tecnologia', 'QCOM'),
-('Snap Inc', 'Servicios de comunicacion', 'SNAP'),
+('Snap Inc', 'Tecnologia', 'SNAP'),
 ('Texas Instruments Incorporated', 'Tecnologia', 'TXN'),
 ('Twitter Inc', 'Servicios de comunicacion', 'TWTR'),
 ('Wells Fargo & Co', 'Servicios financieros', 'WFC'),
@@ -71,21 +71,21 @@ INSERT INTO `companies` (`Company`, `Sector`, `Tiker`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `date`
+-- Table structure for table `dates`
 --
 
-CREATE TABLE `date` (
+CREATE TABLE `dates` (
   `Tiker` varchar(15) NOT NULL,
-  `Index` varchar(10) NOT NULL,
+  `Index` varchar(10) DEFAULT NULL,
   `MarketCap` varchar(60) NOT NULL,
   `Shares` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `date`
+-- Dumping data for table `dates`
 --
 
-INSERT INTO `date` (`Tiker`, `Index`, `MarketCap`, `Shares`) VALUES
+INSERT INTO `dates` (`Tiker`, `Index`, `MarketCap`, `Shares`) VALUES
 ('AMD', 'NASDAQ100', 'Large Cap ($110.35B)', 1614321000),
 ('AMZN', 'S&P 500', 'Mega Cap ($1.20T)', 10187560000),
 ('AUY', 'NYSE', 'Small Cap ($4.21B)', 961068000),
@@ -124,24 +124,13 @@ INSERT INTO `date` (`Tiker`, `Index`, `MarketCap`, `Shares`) VALUES
 -- Indexes for table `companies`
 --
 ALTER TABLE `companies`
-  ADD PRIMARY KEY (`Company`),
-  ADD KEY `fk_companies_date` (`Tiker`);
+  ADD PRIMARY KEY (`Company`);
 
 --
--- Indexes for table `date`
+-- Indexes for table `dates`
 --
-ALTER TABLE `date`
+ALTER TABLE `dates`
   ADD PRIMARY KEY (`Tiker`);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `companies`
---
-ALTER TABLE `companies`
-  ADD CONSTRAINT `fk_companies_date` FOREIGN KEY (`Tiker`) REFERENCES `date` (`Tiker`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
