@@ -38,7 +38,7 @@ class FinanceController {
         $company = ucwords($_POST['company']);
         $sector = $_POST['sector'];
         $tiker =  strtoupper($_POST['tiker']);
-        $id = $this->model->insertCompany($company, $sector, $tiker) ;
+        $this->model->insertCompany($company, $sector, $tiker) ;
         header("Location: " .BASE_URL. "company"); 
     }
     

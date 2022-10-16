@@ -16,13 +16,10 @@
             //hacer algo asi pero para JOIN
         }
         
-         
-
-        
-        /* function insertCompany($tiker, $index, $marketcap, $shares) {
-            $query = $this->db->prepare("INSERT INTO date (tiker, index, merketcap, shares)  VALUES (?, ?, ?, ?)");
-            $query->execute([$tiker, $index, $marketcap, $shares]);
+        function insertDates($tiker, $Index, $MarketCap, $Shares) {
+            $query = $this->db->prepare("INSERT INTO dates (tiker, Indexs, MarketCap, Shares) VALUES (?, ?, ?, ?)");
+            $query->execute([$tiker, $Index, $MarketCap, $Shares]);
             return $this->db->lastInsertId();
-        } */
+        }
     
     }

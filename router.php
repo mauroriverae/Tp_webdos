@@ -34,6 +34,9 @@ switch ($params[0]) {
     case 'add':
         $financeController->addCompany();
         break;
+    case 'addDates':
+        $infoController->addDates();
+        break;
     case 'delete':
         $company = $params[1];
         $financeController->deleteComapny($company);

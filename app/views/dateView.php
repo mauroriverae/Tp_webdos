@@ -6,7 +6,8 @@
             $this->smarty = new Smarty();
         } 
 
-        function showDate($dates) {
+        function showDate($dates, $tiker) {
+            $this->smarty->assign("tiker", $tiker);
             $this->smarty->assign("dates", $dates);
             $this->smarty->display('templates/date.tpl');
         }
