@@ -11,7 +11,7 @@
 	  <tbody>
 	  	{foreach from=$type item=$sector}	
 			<tr class="">
-				<td>{$sector->Tiker}</td>
+				<td><a class="tiker" href="information/{$sector->Tiker}">{$sector->Tiker}</a></td>
 				<td>{$sector->Company}</td>
 				<td>{$sector->Sector}</td>
 			</tr>
