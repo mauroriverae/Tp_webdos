@@ -7,6 +7,8 @@
           <th scope="col">Index</th>
           <th scope="col">Market Cap</th>
           <th scope="col">Shares</th>
+          <th scope="col"></th>
+          
         </tr>
       </thead>
 	  <tbody>
@@ -16,9 +18,14 @@
 				<td>{$date->Indexs}</td>
 				<td>{$date->MarketCap}</td>
 				<td>{$date->Shares}</td>
-				{* <td>
-					<a href="delete/{$company->Company}" type='button' class='btn btn-danger'>Borrar</a>
-				</td> *}
+				{if ($smarty.session.email !== 'mauro@mauro')}
+					<td></td>
+				{else}
+					<td>
+						<a href="deleteDates/{$date->Tiker}" type='button' class='btn btn-danger'>Borrar</a>
+						<a href="modifyDates/{$date->Tiker}" type='button' class='btn btn-warning'>modificar</a>
+					</td>
+				{/if}
 			</tr>
 		{/foreach}
 	</tbody>

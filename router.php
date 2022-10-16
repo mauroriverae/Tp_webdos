@@ -41,6 +41,10 @@ switch ($params[0]) {
         $company = $params[1];
         $financeController->deleteComapny($company);
         break;
+    case 'deleteDates':
+        $tiker = $params[1];
+        $infoController->deleteDates($tiker);
+        break;
     case 'modify':
         $company = $params[1];
         $financeController->modifyCompany($company);

@@ -28,9 +28,14 @@
             $Shares = $_POST['shares'];
             $Tiker =  strtoupper($_POST['tiker']);
             $this->model->insertDates($Tiker, $Index, $MarketCap, $Shares) ;
-            header("Location: " .BASE_URL. "company"); 
+            header("Location: " .BASE_URL. "information/$Tiker"); 
         }
 
+        function deleteDates($tiker) {
+            $this->authHelper->checkLogged();
+            $this->model->deleteDate($tiker);
+            header("Location: " . BASE_URL."information/$tiker");
+        }
         /* Cambiar por join, esta mal asi  */
 
     }

@@ -12,7 +12,7 @@
 	  <tbody>
 	  	{foreach from=$companies item=$company}	
 			<tr class="">
-			<td><a class="tiker" href="information/{$company->Tiker}">{$company->Tiker}</a></td>
+				<td><a class="tiker" href="information/{$company->Tiker}">{$company->Tiker}</a></td>
 				<td>{$company->Company}</td>
 				<td>{$company->Sector}</td>
 				{* Agregar nivel en la bD *}

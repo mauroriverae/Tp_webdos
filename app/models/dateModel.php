@@ -21,5 +21,9 @@
             $query->execute([$tiker, $Index, $MarketCap, $Shares]);
             return $this->db->lastInsertId();
         }
+        function deleteDate($tiker){
+            $query = $this->db->prepare('DELETE FROM dates WHERE Tiker = ?');
+            $query->execute([$tiker]);
+        }
     
     }
