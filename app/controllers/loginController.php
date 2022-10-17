@@ -37,7 +37,7 @@
                     $this->view->showLogin("Acceso denegado");
                 }
             } else {
-                $email = 'mauro@mauro';
+                $email = 'invited';
                 $password = '123';
                 
                 $user = $this->model->getUser($email);

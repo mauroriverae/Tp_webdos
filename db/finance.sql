@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 15, 2022 at 11:56 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-10-2022 a las 09:24:23
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `finance`
+-- Base de datos: `finance`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `companies`
+-- Estructura de tabla para la tabla `companies`
 --
 
 CREATE TABLE `companies` (
@@ -34,7 +34,7 @@ CREATE TABLE `companies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `companies`
+-- Volcado de datos para la tabla `companies`
 --
 
 INSERT INTO `companies` (`Company`, `Sector`, `Tiker`) VALUES
@@ -71,21 +71,21 @@ INSERT INTO `companies` (`Company`, `Sector`, `Tiker`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dates`
+-- Estructura de tabla para la tabla `dates`
 --
 
 CREATE TABLE `dates` (
   `Tiker` varchar(15) NOT NULL,
-  `Index` varchar(10) DEFAULT NULL,
+  `Indexs` varchar(10) DEFAULT NULL,
   `MarketCap` varchar(60) NOT NULL,
   `Shares` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `dates`
+-- Volcado de datos para la tabla `dates`
 --
 
-INSERT INTO `dates` (`Tiker`, `Index`, `MarketCap`, `Shares`) VALUES
+INSERT INTO `dates` (`Tiker`, `Indexs`, `MarketCap`, `Shares`) VALUES
 ('AMD', 'NASDAQ100', 'Large Cap ($110.35B)', 1614321000),
 ('AMZN', 'S&P 500', 'Mega Cap ($1.20T)', 10187560000),
 ('AUY', 'NYSE', 'Small Cap ($4.21B)', 961068000),
@@ -117,17 +117,17 @@ INSERT INTO `dates` (`Tiker`, `Index`, `MarketCap`, `Shares`) VALUES
 ('XOM', 'S&P 500', 'Mega Cap ($370.34B)', 4167636000);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `companies`
+-- Indices de la tabla `companies`
 --
 ALTER TABLE `companies`
   ADD PRIMARY KEY (`Company`);
 
 --
--- Indexes for table `dates`
+-- Indices de la tabla `dates`
 --
 ALTER TABLE `dates`
   ADD PRIMARY KEY (`Tiker`);

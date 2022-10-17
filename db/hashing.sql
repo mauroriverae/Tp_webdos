@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-10-2022 a las 22:17:41
+-- Tiempo de generación: 17-10-2022 a las 09:22:58
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -29,19 +29,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `email` varchar(45) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `level` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`email`, `password`) VALUES
-('demo@gmail.com', '$2y$10$o4okfQymD2IbbtZSTFidgevPV5G9.pAzd2t812eVnV18okYIAqipK'),
-('mauro23@qwe', '11223'),
-('mauro23rivera@gmail.com', 'Maurorivera'),
-('mauro@mauro', '$2y$10$zTtmUXF6QqxcwBCXFCSdze18q8Dx7JAle4OjniLVE6LNgcr1Hjvwa'),
-('maurorivera@gmail.com', '12345');
+INSERT INTO `users` (`email`, `password`, `level`) VALUES
+('adm', '$2y$10$ZBZJeS9U.whahlqrIx0eRuzmi78ef/.rl7SjF3MDP2O1zIQsA8zOq', 'adm'),
+('invited', '$2y$10$tT.lmGfxqoEIDTOL0E.ivuu4PQZnZtFORpI9pSNjbtjxavnLABv3C', 'invited');
 
 --
 -- Índices para tablas volcadas

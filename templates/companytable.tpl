@@ -17,19 +17,20 @@
 				<td>{$company->Sector}</td>
 				{* Agregar nivel en la bD *}
 				{* check enviar datos mediante injection *}
-				{if ($smarty.session.email !== 'invite')}
-					<td></td>
-				{else}
+				{if ($smarty.session.email == 'adm')}
 					<td>
 						<a href="delete/{$company->Company}" type='button' class='btn btn-danger'>Borrar</a>
 						<a href="modify/{$company->Tiker}" type='button' class='btn btn-warning'>modificar</a>
 					</td>
+					
+				{else}
+					<td></td>
 				{/if}
 			</tr>
 		{/foreach}
 	</tbody>
 </table>
-{if ($smarty.session.email == 'adm@adm')} 
+{if ($smarty.session.email == 'adm')} 
 	{include file="templates/form_alta.tpl"}		
 	
 {else}
