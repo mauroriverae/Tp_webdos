@@ -17,7 +17,7 @@
 				<td>{$company->Sector}</td>
 				{* Agregar nivel en la bD *}
 				{* check enviar datos mediante injection *}
-				{if ($smarty.session.email !== 'mauro@mauro')}
+				{if ($smarty.session.email !== 'invite')}
 					<td></td>
 				{else}
 					<td>
@@ -29,9 +29,10 @@
 		{/foreach}
 	</tbody>
 </table>
-{if ($smarty.session.email !== 'mauro@mauro')} 
-	<button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
-{else}
+{if ($smarty.session.email == 'adm@adm')} 
 	{include file="templates/form_alta.tpl"}		
+	
+{else}
+	<button class="btn bg-danger"><a class="navbar-brand" href="">Login</a></button>
 {/if}
 {include file="templates/footer.tpl" }

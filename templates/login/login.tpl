@@ -13,9 +13,10 @@
         <img src="templates/login/login.png" alt="Login">
         <p class="text">Bienvenidos</p>
         <form class="login-form" action="verify" method="post">
-            <input type="email" name="email" placeholder="Ingrese su email" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
+            <input type="email" name="email" placeholder="Ingrese su email" >
+            <input type="password" name="password" placeholder="Contraseña" >
             <button type="submit">Ingresar</button>
+            <button type="submit">Invitado</button>
         </form>
         <p  id="error">{$error}</p>
     </div>

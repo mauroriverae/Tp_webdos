@@ -18,7 +18,7 @@
 				<td>{$date->Indexs}</td>
 				<td>{$date->MarketCap}</td>
 				<td>{$date->Shares}</td>
-				{if ($smarty.session.email !== 'mauro@mauro')}
+				{if ($smarty.session.email !== 'invite')}
 					<td></td>
 				{else}
 					<td>
@@ -30,7 +30,7 @@
 		{/foreach}
 	</tbody>
 </table>
-{if !isset($date->Indexs)}
+{if (!isset($date->Indexs) && ($smarty.session.email !== 'invite'))}
 	<form action="addDates" method="POST" enctype="multipart/form-data" class="my-4">
 		<div class="row">
 			<div class="col-9">
@@ -59,7 +59,6 @@
 					<input name="shares" type="number" class="form-control" required>
 				</div>
 			</div>
-			
 		</div>
 
 		<button type="submit" class="btn btn-primary mt-2">Guardar</button>
