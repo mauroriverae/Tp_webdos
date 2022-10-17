@@ -20,7 +20,7 @@
             $dates = $this->model->dateCompany($tiker);
             $this->view->showDate($dates, $tiker);
         }
-
+        
         function addDates(){
             $this->authHelper->checkLogged();   
             $Index = $_POST['index'];
